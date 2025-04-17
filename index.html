@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cosmic Nova</title>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #00f260;
+      --secondary: #0575e6;
+      --accent: #ff6f61;
+      --glass-bg: rgba(255, 255, 255, 0.05);
+      --glass-border: rgba(255, 255, 255, 0.15);
+      --header-bg: rgba(0, 0, 0, 0.6);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Outfit', sans-serif;
+    }
+
+    body, html {
+      height: 100%;
+      overflow-x: hidden;
+      color: white;
+    }
+
+    header {
+      background: var(--header-bg);
+      padding: 20px;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 100;
+    }
+
+    header nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 1.1rem;
+      transition: color 0.3s ease;
+    }
+
+    header nav a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      background: url('https://wallpaperaccess.com/full/1128651.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: linear-gradient(to right, #00f260, #0575e6);
+      padding: 14px 32px;
+      border: none;
+      border-radius: 40px;
+      color: white;
+      font-size: 1.2rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--primary);
+    }
+
+    section p {
+      font-size: 1.1rem;
+      color: #ddd;
+      max-width: 800px;
+      margin: 0 auto;
+      margin-bottom: 40px;
+    }
+
+    .services,
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .service-card, .gallery-item {
+      background: var(--glass-bg);
+      padding: 40px;
+      border-radius: 15px;
+      width: 250px;
+      box-shadow: 0 4px 15px rgba(0, 242, 96, 0.2);
+      text-align: center;
+    }
+
+    .service-card h3, .gallery-item h3 {
+      font-size: 1.4rem;
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 15px;
+      font-size: 1rem;
+      border: 1px solid var(--glass-border);
+      border-radius: 10px;
+      background: var(--glass-bg);
+      color: white;
+      outline: none;
+    }
+
+    .contact-form button {
+      background: var(--primary);
+      color: white;
+      padding: 15px;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      transform: scale(1.05);
+    }
+
+    footer {
+      background: #111;
+      padding: 40px 20px;
+      text-align: center;
+      color: #ddd;
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    @keyframes glow {
+      0% { text-shadow: 0 0 20px var(--primary), 0 0 30px var(--secondary), 0 0 40px var(--accent); }
+      100% { text-shadow: 0 0 50px var(--primary), 0 0 70px var(--secondary), 0 0 90px var(--accent); }
+    }
+
+    @media (max-width: 768px) {
+      .services, .gallery {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
+    <h1>Cosmic Nova</h1>
+    <p>Explore the universe of digital possibilities</p>
+    <a href="#services" class="btn">Explore More</a>
+  </div>
+</div>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>At Cosmic Nova, we bridge the gap between creativity and technology, offering innovative solutions for businesses that want to reach new heights.</p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service-card">
+      <h3>Web Design</h3>
+      <p>Beautiful, user-friendly, responsive websites that captivate audiences.</p>
+    </div>
+    <div class="service-card">
+      <h3>Branding</h3>
+      <p>Create a memorable identity that sets your brand apart from the rest.</p>
+    </div>
+    <div class="service-card">
+      <h3>Consulting</h3>
+      <p>We provide expert consulting to help your business thrive in the digital world.</p>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Our Work</h2>
+  <div class="gallery">
+    <div class="gallery-item">
+      <h3>Project One</h3>
+      <img src="https://via.placeholder.com/250" alt="Project One" />
+    </div>
+    <div class="gallery-item">
+      <h3>Project Two</h3>
+      <img src="https://via.placeholder.com/250" alt="Project Two" />
+    </div>
+    <div class="gallery-item">
+      <h3>Project Three</h3>
+      <img src="https://via.placeholder.com/250" alt="Project Three" />
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required />
+    <input type="email" placeholder="Your Email" required />
+    <textarea placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 Cosmic Nova. All rights reserved.</p>
+  <div>
+    <a href="#">Facebook</a>
+    <a href="#">Instagram</a>
+    <a href="#">Twitter</a>
+  </div>
+</footer>
+
+</body>
+</html>
